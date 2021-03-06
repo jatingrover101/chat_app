@@ -7,7 +7,7 @@ const ThierMessage = ({lastMessage, message }) => {
 			style={{backgroundImage: `url(${message.sender.avatar})`}}
 			/>
 		)}
-		{message ?.attachments ?.length > 0 ?
+		{message?.attachments?.length > 0 ?
 		(
 			<img 
 				src={message.attachments[0].file}
