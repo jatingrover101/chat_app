@@ -1,9 +1,22 @@
 import MessageForm from './MessageForm';
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
+import { useState } from 'react';
 
 const ChatFeed = (props) => {
-	const { chats,activeChat, userName, messages} = props;
+	const { chats, activeChat, userName, messages } = props;
+	const [ setError] = useState('');
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			localStorage.setItem('username', '');
+			localStorage.setItem('password', '');
+
+			window.location.reload();
+		} catch (error) {
+			setError('Oops, cannot logout.')
+		}
+	}
 
 	const chat = chats && chats[activeChat];
 	const renderReadReceipts = (message, isMyMessage) => {
@@ -44,8 +57,8 @@ const ChatFeed = (props) => {
 		})
 
 	}
-
-	if(!chat) return 'loading...'
+	
+	if(!chat) return 'Start a new chat...'
 	return (
 		<div className="chat-feed">
 			<div className="chat-title-container">
@@ -53,12 +66,19 @@ const ChatFeed = (props) => {
 				<div className="chat-subtitle">
 					{chat.people.map((person) => ` ${person.person.username}`)}
 				</div>
+				<div>
+				<form onSubmit={handleSubmit}>
+					<button type="submit" className="button1">LogOut</button>
+				</form>
+				</div>	
+				
 			</div>
 			{renderMessages()}
 			<div style={{height: '100px'}}/>
 			<div className="message-form-container">
 				<MessageForm {...props} chatId={activeChat} />
 			</div>
+			
 		</div>
 	)
 }

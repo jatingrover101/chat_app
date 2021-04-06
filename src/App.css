@@ -78,22 +78,39 @@
 }
 
 .chat-title-container {
-  width: calc(100% - 36px);
+  width: auto;
   padding: 18px;
-  text-align: center;
 }
 
 .chat-title {
-  color: #7554a0;
-  font-weight: 800;
-  font-size: 24px;
+    color: #7554a0;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
 }
 
 .chat-subtitle {
-  color: #7554a0;
-  font-weight: 600;
-  font-size: 12px;
-  padding-top: 4px;
+    color: #7554a0;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 4px;
+    float: left;
+   
+}
+.button1 {
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 10px;
+    width: auto;
+    transition: all 0.4s;
+    cursor: pointer;
+    width: 30%;
+    float: right;
 }
 
 .message-row {
@@ -211,28 +228,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 62,5%;
+  font-size: 62px,5%;
 }
 
 .wrapper {
-  height: 100vh;
+  height: 93vh;
 	width: 100%;
   background: rgb(117,84,160);
   background: linear-gradient(90deg, rgba(117,84,160,1) 7%, rgba(117,84,160,1) 17%, rgba(106,95,168,1) 29%, rgba(99,103,174,1) 44%, rgba(87,116,184,1) 66%, rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);  
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
+}
+.wrapper1 {
+    height: 50px;
+    width: auto;
+    background: rgb(117,84,160);
+    background: linear-gradient(90deg, rgba(117,84,160,1) 7%, rgba(117,84,160,1) 17%, rgba(106,95,168,1) 29%, rgba(99,103,174,1) 44%, rgba(87,116,184,1) 66%, rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input {
   color: #333;
   font-size: 1.2rem;
-	margin: 0 auto;
-  padding: 1.5rem 2rem;
+    margin: 0 auto;
+  padding: 1rem 1.5rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
   border: none;
-  width: 90%;
+  width: 50%;
   display: block;
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
@@ -240,16 +266,29 @@
   margin-bottom: 25px;
 }
 
-.form {
-  width: 400px;
+.form1 {
+  width: 50%;
+  float: left;
+}
+.form2 {
+    width: 50%;
+    float: right;
+}
+
+.title1 {
+    text-align: center;
+    color: #581845;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 2.3em;
 }
 
 .title {
   text-align: center;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 100%;
-  font-size: 2.3em;;
+  font-size: auto;
 }
 
 .button {
@@ -259,13 +298,12 @@
   color: black;
   text-align: center;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: auto;
   padding: 20px;
-  width: 200px;
   transition: all 0.4s;
   cursor: pointer;
   margin: 5px;
-  width: 90%;
+  width: 50%;
 }
 .button span {
   cursor: pointer;
