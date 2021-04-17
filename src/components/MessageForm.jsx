@@ -20,7 +20,7 @@ const MessageForm = (props) => {
 		sendMessage(creds, chatId, { files: event.target.files, text: '' });
 	}
 	return (
-
+		<div>
 		<form className="message-form" onSubmit={handleSubmit}>
 			<input 
 				className="message-input"
@@ -46,7 +46,8 @@ const MessageForm = (props) => {
 			<button type="submit" className="send-button">
 				<SendOutlined className="send-icon" />
 			</button>
-		</form>
+			</form>
+		</div>
 	);
 }
 

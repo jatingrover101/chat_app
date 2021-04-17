@@ -3,9 +3,9 @@ const ThierMessage = ({lastMessage, message }) => {
 	return (
 		<div className="message-row">
 		{isFirstMessageByUser && (
-			<div className="message-avatar"
-			style={{backgroundImage: `url(${message.sender.avatar})`}}
-			/>
+				<div className="message-avatar"
+			style={{ backgroundImage: `url(${message.sender.avatar})` }}
+				/>
 		)}
 		{message?.attachments?.length > 0 ?
 		(
@@ -15,8 +15,8 @@ const ThierMessage = ({lastMessage, message }) => {
 				className="message-image"	
 				style={{ marginLeft: isFirstMessageByUser ? '4px' : '48px'}}
 				/>
-		) : <div className="message" style={{ float: 'left', backgroundColor: '#CABCDC', marginLeft: isFirstMessageByUser ? '4px' : '48px'}}>
-		{message.text}
+				) : <div className="message" style={{ float: 'left', backgroundColor: '#CABCDC', marginLeft: isFirstMessageByUser ? '4px' : '48px' }}>
+					<div className="firstname">{message.sender.first_name}</div><div>{message.text}</div>
 		</div>
 
 	}

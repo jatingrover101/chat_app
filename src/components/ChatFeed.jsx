@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const ChatFeed = (props) => {
 	const { chats, activeChat, userName, messages } = props;
-	const [ setError] = useState('');
+	const [setError] = useState('');
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
@@ -58,13 +58,13 @@ const ChatFeed = (props) => {
 
 	}
 	
-	if(!chat) return 'Start a new chat...'
+	if (!chat) return (<div><h3>Loading!!! Start a new chat...</h3></div>)
 	return (
 		<div className="chat-feed">
 			<div className="chat-title-container">
 				<div className="chat-title">{chat?.title}</div>
 				<div className="chat-subtitle">
-					{chat.people.map((person) => ` ${person.person.username}`)}
+					{chat.people.map((person) => ` ${person.person.first_name} ${person.person.last_name} ${(",")}`)}
 				</div>
 				<div>
 				<form onSubmit={handleSubmit}>
